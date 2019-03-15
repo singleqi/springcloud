@@ -19,5 +19,20 @@
 *.tar.gz
 *.rar
 
+# IntelliJ IDEA project stuff
+*.iml
+*.ipr
+*.iws
+.idea
+.idea_modules
+
+# Eclipse files and directories
+.classpath
+.project
+.settings/
+
+**/.idea/*
+**/target/*
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
