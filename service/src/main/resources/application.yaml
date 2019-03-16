@@ -1,9 +1,33 @@
+---
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 spring:
+  profiles: service1
   application:
     name: service
 server:
   port: 8081
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  profiles: service2
+  application:
+    name: service
+server:
+  port: 8082
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  profiles: service3
+  application:
+    name: service
+server:
+  port: 8083
