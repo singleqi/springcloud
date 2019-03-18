@@ -20,6 +20,11 @@
             <!--spring boot 1.X：spring-cloud-starter-hystrix-->
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <!--spring boot 1.X：spring-cloud-starter-hystrix-dashboard-->
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

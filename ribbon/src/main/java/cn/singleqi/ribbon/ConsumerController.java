@@ -13,7 +13,7 @@ public class ConsumerController {
 
     @HystrixCommand(fallbackMethod = "defaultStores")
     @GetMapping(value = "/")
-    public String hello() {
+    public String home() {
         return restTemplate.getForEntity("http://service/", String.class).getBody();
     }
 

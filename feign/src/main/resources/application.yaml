@@ -4,9 +4,15 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 spring:
   application:
-    name: feign-consumer
+    name: hystrix-feign-consumer
 server:
-  port: 9000
+  port: 9001
 feign:
   hystrix:
     enabled: true
+# 熔断器DashBoard: actuator在boot2.0调整后开关web端点的配置，*代表开启所有
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
