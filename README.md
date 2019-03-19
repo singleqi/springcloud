@@ -25,6 +25,7 @@ Feign默认集成了Ribbon，并和Eureka结合，默认实现了负载均衡的
 *并在此模块加上Hystrix和Dashboard的实现*
 
 ## 5.Hystrix
-此子项目主要展示熔断器的Turbine实现(在3.Ribbon,4.Feign的运行的基础上)，Turbine是把多个熔断器作为一个[Cluster](https://juejin.im/post/5c8a348f6fb9a049c644b86b#heading-7)集中显示在Dashboard上。  
+此子模块主要展示熔断器的Turbine实现(在3.Ribbon,4.Feign的运行的基础上)，Turbine是把多个熔断器作为一个[Cluster](https://juejin.im/post/5c8a348f6fb9a049c644b86b#heading-7)集中显示在Dashboard上。  
 
-## 6.Zuul
+## 6.[Zuul](http://www.ymq.io/2017/12/10/spring-cloud-zuul/)
+此子模块主要展示了服务网关的*1.路由转发和2.过滤器作用*，在服务网关中可以完成一系列的横切功能，例如权限校验、限流以及监控等，这些都可以通过过滤器完成（其实路由转发也是通过过滤器实现的）。
