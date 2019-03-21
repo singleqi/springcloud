@@ -17,7 +17,7 @@ public class ServiceApplication {
     @Value("${server.port}")
     String port;
 
-    @Value("${content}")
+    @Value("${content:con't get remote content}")
     String content;
 
     @RequestMapping("/")
