@@ -1,33 +1,13 @@
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+#和重试机制相关的配置有如下四个：
 spring:
-  profiles: service1
-  application:
-    name: service
-server:
-  port: 8081
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-spring:
-  profiles: service2
-  application:
-    name: service
-server:
-  port: 8082
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-spring:
-  profiles: service3
-  application:
-    name: service
-server:
-  port: 8083
+  cloud:
+    config:
+      retry:
+        # 配置重试次数，默认为6
+        max-attempts: 6
+        # 间隔乘数，默认1.1
+        multiplier: 1.1
+        # 初始重试间隔时间，默认1000ms
+        initial-interval: 1000
+        # 最大间隔时间，默认2000ms
+        max-interval: 2000

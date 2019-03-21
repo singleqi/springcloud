@@ -17,6 +17,7 @@
         <module>feign</module>
         <module>hystrix</module>
         <module>zuul</module>
+        <module>config</module>
     </modules>
 
     <!--父级：Spring Boot-->

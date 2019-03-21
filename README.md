@@ -35,3 +35,7 @@ Feign默认集成了Ribbon，并和Eureka结合，默认实现了负载均衡的
 ## 6.[Zuul](http://www.ymq.io/2017/12/10/spring-cloud-zuul/)
 此子模块主要展示了服务网关的*1.路由转发和2.过滤器作用*，在服务网关中可以完成一系列的横切功能，例如权限校验、限流以及监控等，这些都可以通过过滤器完成（其实路由转发也是通过过滤器实现的）。
 测试url：http://localhost:9005/?token=token-uuid&password=123456
+
+## 7.Config
+此子模块主要展示项目如何从远程git上获取和更新最新的配置文件
+测试url: http://localhost:9010/service-dev.yaml (调用此配置的服务名称-profile.yaml)
