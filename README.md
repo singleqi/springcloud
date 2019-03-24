@@ -45,3 +45,7 @@ refresh url: http://localhost:8081/actuator/refresh
 配置在Config和Service上，主要将分布式系统的节点通过轻量级消息代理连接起来。用于在集群中传播状态更改（例如配置更改事件）或其他管理指令。  
 唯一实现的方式是用 AMQP 消息代理作为通道，但是相同的基本功能集（还有一些取决于传输）在其他传输的路线图上。
 测试url：http://localhost:9010/actuator/bus-refresh
+
+环境Java,Maven,Docker,docker-compose
+打包：mvn clean package docker:build
+运行：docker -f <./docker-compose.yaml> up

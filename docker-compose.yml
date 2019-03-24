@@ -1,4 +1,4 @@
-version: '1'
+version: '3'
 services:
   eureka:
     image: singleqi/eureka
@@ -8,6 +8,14 @@ services:
     image: singleqi/config
     ports:
       - "9010:9010"
+  feign:
+    image: singleqi/feign
+    ports:
+      - "9001:9001"
+  ribbon:
+    image: singleqi/ribbon
+    ports:
+      - "9002:9002"
   hystrix:
     image: singleqi/hystrix
     ports:
