@@ -9,7 +9,10 @@ server:
   port: 9005
 zuul:
   routes:
-    api:
-      path: /**
-      serviceId: service
+    api-a:
+      path: /api-feign/**
+      serviceId: hystrix-feign-consumer
+    api-b:
+      path: /api-ribbon/**
+      serviceId: hystrix-ribbon-consumer
 

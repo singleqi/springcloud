@@ -34,8 +34,14 @@ Feign默认集成了Ribbon，并和Eureka结合，默认实现了负载均衡的
 
 ## 6.[Zuul](http://www.ymq.io/2017/12/10/spring-cloud-zuul/)
 此子模块主要展示了服务网关的*1.路由转发和2.过滤器作用*，在服务网关中可以完成一系列的横切功能，例如权限校验、限流以及监控等，这些都可以通过过滤器完成（其实路由转发也是通过过滤器实现的）。  
-测试url：http://localhost:9005/?token=token-uuid&password=123456
+测试url：http://localhost:9005/api-feign/?token=token-uuid&password=123456、http://localhost:9005/api-ribbon/?token=token-uuid&password=123456
 
 ## 7.Config
 此子模块主要展示项目如何从远程git上获取和更新最新的配置文件。  
 测试url: http://localhost:9010/service-dev.yaml (调用此配置的服务名称-profile.yaml)
+refresh url: http://localhost:8081/actuator/refresh
+
+## 8.Bus
+配置在Config和Service上，主要将分布式系统的节点通过轻量级消息代理连接起来。用于在集群中传播状态更改（例如配置更改事件）或其他管理指令。  
+唯一实现的方式是用 AMQP 消息代理作为通道，但是相同的基本功能集（还有一些取决于传输）在其他传输的路线图上。
+测试url：http://localhost:9010/actuator/bus-refresh
