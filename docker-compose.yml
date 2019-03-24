@@ -1,0 +1,30 @@
+version: '1'
+services:
+  eureka:
+    image: singleqi/eureka
+    ports:
+      - "8761:8761"
+  config:
+    image: singleqi/config
+    ports:
+      - "9010:9010"
+  hystrix:
+    image: singleqi/hystrix
+    ports:
+      - "9000:9000"
+  zuul:
+    image: singleqi/zuul
+    ports:
+      - "9005:9005"
+  service1:
+    image: singleqi/service
+    ports:
+      - "8081:8080"
+  service2:
+    image: singleqi/service
+    ports:
+      - "8082:8080"
+  service3:
+    image: singleqi/service
+    ports:
+      - "8083:8080"
