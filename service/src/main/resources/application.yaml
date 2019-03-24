@@ -1,10 +1,10 @@
 #和重试机制相关的配置有如下四个：
 spring:
   rabbitmq:
-    host: 192.168.12.3
+    host: localhost
     port: 5672
-    username: cloudchef
-    password: c10udch3f
+    username: guest
+    password: guest
   cloud:
     config:
       retry:
