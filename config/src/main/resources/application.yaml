@@ -17,8 +17,8 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    username: guest
-    password: guest
+    username: admin
+    password: admin
 # actuator在boot2.0调整后开关web端点的配置，*代表开启所有
 management:
   endpoints:

@@ -46,6 +46,6 @@ refresh url: http://localhost:8081/actuator/refresh
 唯一实现的方式是用 AMQP 消息代理作为通道，但是相同的基本功能集（还有一些取决于传输）在其他传输的路线图上。
 测试url：http://localhost:9010/actuator/bus-refresh
 
-环境Java,Maven,Docker,docker-compose
-打包：mvn clean package docker:build
-运行：docker -f <./docker-compose.yaml> up
+环境Java,Maven,Docker,docker-compose  
+打包：mvn clean package docker:build  
+运行：docker-compose -f <./docker-compose.yaml> up  
